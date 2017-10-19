@@ -30,6 +30,21 @@ $( document ).ready(function() {
     window.localStorage.setItem(key4,value4);
     
     alert(window.localStorage.length);
+    
+   var oreobar =  {
+       "nutrion":{
+        "calories" : "84",
+       "fat" : "5.3g",
+       "saturates" : "3g",
+       "sugars" : "7.3g",
+       "salt" : "0.006g"
+       }
+    }
+    var oreobarString = JSON.stringify(oreobar);
+    window.localStorage.setItem("nutrion",oreobarString);
+    var getoreobar = window.localStorage.getItem("nutrion");
+    var oreobarJSON = JSON.parse(getoreobar);
+    alert("An oreo bar has " + oreobar.nutrion.calories + " calories");
 });
     
  alert("hello");   
