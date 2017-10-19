@@ -1,46 +1,52 @@
-var paused_count =0;
-var resumed_count = 0;
-var launched_count = 0;
+$( document ).ready(function() {
+    alert( "ready!" );
+    
+    function updateDisplay() {
+	$("#launched").text("Application launched: " + launched_count);
+
+}
+  var key = "Phone";
+    var value = "Iphone";
+    window.localStorage.setItem(key,value);
+    window.localStorage.getItem(key);
+    alert("my"+key+"is a"+ value);
+    
+    var key2 = "drink";
+    var value2 ="cola";
+    window.localStorage.setItem(key2,value2);
+    
+    
+    var key3 = "bag";
+    var value3 = "Addidas";
+     window.localStorage.setItem(key3,value3);
+    
+    
+    var key4 = "pen";
+    var value4 = "black";
+    window.localStorage.setItem(key4,value4);
+     
+    var key5 = "phone_2";
+    var value5 = "HTCONE";
+    window.localStorage.setItem(key4,value4);
+    
+    
+});
+    
+ alert("hello");   
 //event listner defined for device ready event
 document.addEventListener("deviceready", onDeviceReady, false);
-		
-	
-function updateDisplay() {
-	$("#launched").text("Application launched: " + launched_count);
-	$("#resumed").text("Application paused: " + paused_count);
-	$("#paused").text("Application resumed: " + resumed_count);
-}
 
 
 // device APIs are available
 //Event handlers for the resume and pause events
     function onDeviceReady() {
 	//Event lisntners defined
-	document.addEventListener("resume", onResume, false);
-	document.addEventListener("pause", onPause, false);
 	
-	launched_count++;
+	
+	
 	updateDisplay();
 	    
 	alert("device ready");
     }
 
-    //Event handlers used as a result of the on pause event beign triggered 
-    //This adds 1 to the pause count each time someone goes out of the app
-    function onPause() {
-	
-	paused_count++;
-	updateDisplay();
-	    
-	alert("pause");
-    }
-	
-    //Event handler used as a reuslt of the on resume efent being triggered
-    //This adds 1 to the resume count each time someone goes back into the app
-    function onResume() {
-		
-	resumed_count++;
-	updateDisplay();
-	    
-	alert("resume");
-    }
+
