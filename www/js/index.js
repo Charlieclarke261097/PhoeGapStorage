@@ -9,7 +9,7 @@ $( document ).ready(function() {
     var value = "Iphone";
     window.localStorage.setItem(key,value);
     window.localStorage.getItem(key);
-    alert("my"+key+"is a"+ value);
+    alert("my" + key + "is a" + value);
     
     var key2 = "drink";
     var value2 ="cola";
@@ -29,7 +29,7 @@ $( document ).ready(function() {
     var value5 = "HTCONE";
     window.localStorage.setItem(key4,value4);
     
-    
+    alert(window.localStorage.length);
 });
     
  alert("hello");   
